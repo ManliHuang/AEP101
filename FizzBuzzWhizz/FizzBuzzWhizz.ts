@@ -11,6 +11,8 @@ export default class FizzBuzzWhizz{
             this.reportExpression = 'Fizz'
         } else if (this.dividableByTarget(this.queueingNumber, 5)) {
             this.reportExpression = 'Buzz'
+        } else if (this.dividableByTarget(this.queueingNumber, 7)) {
+            this.reportExpression = 'Whizz'
         } else {
             this.reportExpression = '' + this.queueingNumber
         }
