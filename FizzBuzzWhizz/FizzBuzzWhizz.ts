@@ -1,4 +1,5 @@
 export default class FizzBuzzWhizz{
+    reportExpression: string
     queueingNumber: number;
 
     constructor(queueingNumber: number) {
@@ -6,7 +7,17 @@ export default class FizzBuzzWhizz{
     }
 
     report(): string {
-        return "" + this.queueingNumber
+        if (this.dividableBy3(this.queueingNumber)) {
+            this.reportExpression = 'Fizz'
+        } else {
+            this.reportExpression = '' + this.queueingNumber
+        }
+        return this.reportExpression
     }
+
+    dividableBy3(number: number): boolean {
+        return number % 3 === 0
+    }
+
 }
 
