@@ -10,7 +10,7 @@ export default class FizzBuzzWhizz{
         if (this.dividableByTarget(3)) {
             this.reportExpression = 'Fizz'
             if (this.dividableByTarget( 5)) {
-                this.reportExpression = 'FizzBuzz'
+                this.reportExpression = this.dividableByTarget(7) ? 'FizzBuzzWhizz' : 'FizzBuzz'
             } else if (this.dividableByTarget(7)) {
                 this.reportExpression = 'FizzWhizz'
             }
