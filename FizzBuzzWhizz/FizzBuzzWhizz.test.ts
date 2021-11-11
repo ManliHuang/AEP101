@@ -67,3 +67,10 @@ describe('The number includes 3', () => {
         expect(fizzBuzzWhizz.report()).toEqual('Fizz');
     })
 })
+
+describe('The number includes 5', () => {
+    test('should return 15 when queueing number is 15 which is only dividable by 3', () => {
+        const fizzBuzzWhizz = new FizzBuzzWhizz(15);
+        expect(fizzBuzzWhizz.report()).toEqual('15');
+    })
+})
