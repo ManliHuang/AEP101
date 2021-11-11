@@ -57,8 +57,18 @@ describe('The number includes 3', () => {
         expect(fizzBuzzWhizz.report()).toEqual('Fizz');
     })
 
-    test('should return Fizz when queueing number is 130 which is only dividable by 3', () => {
+    test('should return Fizz when queueing number is 130 which is only dividable by 5', () => {
         const fizzBuzzWhizz = new FizzBuzzWhizz(130);
+        expect(fizzBuzzWhizz.report()).toEqual('Fizz');
+    })
+
+    test('should return Fizz when queueing number is 133 which is only dividable by 7', () => {
+        const fizzBuzzWhizz = new FizzBuzzWhizz(133);
+        expect(fizzBuzzWhizz.report()).toEqual('Fizz');
+    })
+
+    test('should return Fizz when queueing number is 133 which is only dividable by 7', () => {
+        const fizzBuzzWhizz = new FizzBuzzWhizz(133);
         expect(fizzBuzzWhizz.report()).toEqual('Fizz');
     })
 })
