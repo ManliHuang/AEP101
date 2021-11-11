@@ -44,5 +44,11 @@ describe('The number is dividable by more than one target number and excludes 3,
         const fizzBuzzWhizz = new FizzBuzzWhizz(210);
         expect(fizzBuzzWhizz.report()).toEqual('FizzBuzzWhizz');
     })
+})
 
+describe('The number includes 3', () => {
+    test('should return Fizz when queueing number is 13 which is not dividable by 3, 5, 7', () => {
+        const fizzBuzzWhizz = new FizzBuzzWhizz(13);
+        expect(fizzBuzzWhizz.report()).toEqual('Fizz');
+    })
 })
