@@ -16,6 +16,9 @@ export default class FizzBuzzWhizz{
             }
         } else if (this.dividableByTarget( 5)) {
             this.reportExpression = 'Buzz'
+            if (this.dividableByTarget(7)) {
+                this.reportExpression = 'BuzzWhizz'
+            }
         } else if (this.dividableByTarget(7)) {
             this.reportExpression = 'Whizz'
         } else {
