@@ -7,13 +7,13 @@ export default class FizzBuzzWhizz{
     }
 
     report(): string {
-        if (this.dividableByTarget(this.queueingNumber, 3)) {
+        if (this.dividableByTarget(3, null)) {
             this.reportExpression = 'Fizz'
-        } else if (this.dividableByTarget(this.queueingNumber, 5)) {
+        } else if (this.dividableByTarget( 5, null)) {
             this.reportExpression = 'Buzz'
-        } else if (this.dividableByTarget(this.queueingNumber, 7)) {
+        } else if (this.dividableByTarget(7, null)) {
             this.reportExpression = 'Whizz'
-        } else if (this.dividableByTwoNumbers(3, 5)) {
+        } else if (this.dividableByTarget(3, 5)) {
             this.reportExpression = 'FizzBuzz'
         } else {
             this.reportExpression = '' + this.queueingNumber
@@ -21,12 +21,9 @@ export default class FizzBuzzWhizz{
         return this.reportExpression
     }
 
-    dividableByTarget(number: number, target: number): boolean {
-        return number % target === 0
-    }
-
-    dividableByTwoNumbers(number1: number, number2: number): boolean {
-        return this.queueingNumber % number1 === 0 && this.queueingNumber % number2 === 0
+    dividableByTarget(number1: number, number2: number | null): boolean {
+        const dividableByNumber1: boolean = this.queueingNumber % number1 === 0
+        return number2 ? this.queueingNumber % number2 === 0 &&  dividableByNumber1 : dividableByNumber1
     }
 }
 
