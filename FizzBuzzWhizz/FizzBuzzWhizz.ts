@@ -7,9 +7,9 @@ export default class FizzBuzzWhizz{
     }
 
     report(): string {
-        if (this.dividableBy3(this.queueingNumber)) {
+        if (this.dividableByTarget(this.queueingNumber, 3)) {
             this.reportExpression = 'Fizz'
-        } else if (this.dividableBy5(this.queueingNumber)) {
+        } else if (this.dividableByTarget(this.queueingNumber, 5)) {
             this.reportExpression = 'Buzz'
         } else {
             this.reportExpression = '' + this.queueingNumber
@@ -17,12 +17,8 @@ export default class FizzBuzzWhizz{
         return this.reportExpression
     }
 
-    dividableBy3(number: number): boolean {
-        return number % 3 === 0
-    }
-
-    dividableBy5(number: number): boolean {
-        return number % 5 === 0
+    dividableByTarget(number: number, target: number): boolean {
+        return number % target === 0
     }
 }
 
