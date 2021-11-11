@@ -7,23 +7,25 @@ export default class FizzBuzzWhizz{
     }
 
     report(): string {
-        if (this.dividableByTarget(3, null)) {
+        if (this.dividableByTarget(3)) {
             this.reportExpression = 'Fizz'
-        } else if (this.dividableByTarget( 5, null)) {
+            if (this.dividableByTarget( 5)) {
+                this.reportExpression = 'FizzBuzz'
+            } else if (this.dividableByTarget(7)) {
+                this.reportExpression = 'FizzWhizz'
+            }
+        } else if (this.dividableByTarget( 5)) {
             this.reportExpression = 'Buzz'
-        } else if (this.dividableByTarget(7, null)) {
+        } else if (this.dividableByTarget(7)) {
             this.reportExpression = 'Whizz'
-        } else if (this.dividableByTarget(3, 5)) {
-            this.reportExpression = 'FizzBuzz'
         } else {
             this.reportExpression = '' + this.queueingNumber
         }
         return this.reportExpression
     }
 
-    dividableByTarget(number1: number, number2: number | null): boolean {
-        const dividableByNumber1: boolean = this.queueingNumber % number1 === 0
-        return number2 ? this.queueingNumber % number2 === 0 &&  dividableByNumber1 : dividableByNumber1
+    dividableByTarget(target: number): boolean {
+        return this.queueingNumber % target === 0
     }
 }
 
