@@ -13,6 +13,8 @@ export default class FizzBuzzWhizz{
             this.reportExpression = 'Buzz'
         } else if (this.dividableByTarget(this.queueingNumber, 7)) {
             this.reportExpression = 'Whizz'
+        } else if (this.dividableByTwoNumbers(3, 5)) {
+            this.reportExpression = 'FizzBuzz'
         } else {
             this.reportExpression = '' + this.queueingNumber
         }
@@ -21,6 +23,10 @@ export default class FizzBuzzWhizz{
 
     dividableByTarget(number: number, target: number): boolean {
         return number % target === 0
+    }
+
+    dividableByTwoNumbers(number1: number, number2: number): boolean {
+        return this.queueingNumber % number1 === 0 && this.queueingNumber % number2 === 0
     }
 }
 
