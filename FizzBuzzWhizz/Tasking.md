@@ -24,7 +24,7 @@ based on business
 10. given this is the 3rd student, the number includes 3 and is only dividable by 3, when reporting, then he reports 'Fizz'
 11. given this is the 130th student, the number includes 3 and is only dividable by 5, when reporting, then he reports 'Fizz'
 12. given this is the 133rd student, the number includes 3 and is only dividable by 7, when reporting, then he reports 'Fizz'
-13. given this is the 51st student, the number includes 5 and is only dividable by 3, when reporting, then he reports 15
+13. given this is the 51st student, the number includes 5 and is only dividable by 3, when reporting, then he reports 51
 14. given this is the 56th student, the number includes 5 and is only dividable by 7, when reporting, then he reports 'Whizz'
 15. given this is the 15th student, the number includes 5 and is dividable by 3, 5, when reporting, then he reports 'Buzz'
 16. given this is the 35th student, the number includes 5 and is dividable by 5, 7, when reporting, then he reports 'BuzzWhizz'
