@@ -1,5 +1,4 @@
 export default class FizzBuzzWhizz{
-    reportExpression: string
     queueingNumber: number;
 
     constructor(queueingNumber: number) {
@@ -8,47 +7,30 @@ export default class FizzBuzzWhizz{
 
     report(): string {
         if (this.inclusiveByTarget('7')) {
-            this.reportExpression = '' + this.queueingNumber;
-            if (this.inclusiveByTarget('3') || this.dividableByTarget(3)) {
-                this.reportExpression = 'Fizz'
-            }
-
-            if (this.dividableByTarget(7)) {
-                this.reportExpression = 'Whizz';
-                if (this.dividableByTarget(3)) {
-                    this.reportExpression = 'FizzWhizz'
-                }
-            }
-        } else if (this.inclusiveByTarget('5')) {
-            this.reportExpression = '' + this.queueingNumber
-            if (this.dividableByTarget(5)) {
-                this.reportExpression = 'Buzz'
-                if (this.dividableByTarget(7)) {
-                    this.reportExpression = 'BuzzWhizz'
-                }
-            } else if (this.dividableByTarget(7)) {
-                this.reportExpression = 'Whizz'
-            }
-        } else if (this.inclusiveByTarget('3')) {
-            this.reportExpression = 'Fizz'
-        } else if (this.dividableByTarget(3)) {
-            this.reportExpression = 'Fizz'
-            if (this.dividableByTarget( 5)) {
-                this.reportExpression = this.dividableByTarget(7) ? 'FizzBuzzWhizz' : 'FizzBuzz'
-            } else if (this.dividableByTarget(7)) {
-                this.reportExpression = 'FizzWhizz'
-            }
-        } else if (this.dividableByTarget( 5)) {
-            this.reportExpression = 'Buzz'
-            if (this.dividableByTarget(7)) {
-                this.reportExpression = 'BuzzWhizz'
-            }
-        } else if (this.dividableByTarget(7)) {
-            this.reportExpression = 'Whizz'
-        } else {
-            this.reportExpression = '' + this.queueingNumber
+            if (this.dividableByTarget(7)) return this.dividableByTarget(3) ? 'FizzWhizz' : 'Whizz'
+            if (this.inclusiveByTarget('3') || this.dividableByTarget(3)) return 'Fizz'
+            return '' + this.queueingNumber
         }
-        return this.reportExpression
+
+        if (this.inclusiveByTarget('5')) {
+            if (this.dividableByTarget(5)) return this.dividableByTarget(7) ? 'BuzzWhizz' :'Buzz'
+            if (this.dividableByTarget(7)) return 'Whizz'
+            return '' + this.queueingNumber
+        }
+
+        if (this.inclusiveByTarget('3')) return 'Fizz'
+
+        if (this.dividableByTarget(3)) {
+            if (this.dividableByTarget( 5)) return this.dividableByTarget(7) ? 'FizzBuzzWhizz' : 'FizzBuzz'
+            if (this.dividableByTarget(7)) return'FizzWhizz'
+            return 'Fizz'
+        }
+
+        if (this.dividableByTarget( 5)) return this.dividableByTarget(7) ? 'BuzzWhizz' : 'Buzz'
+
+        if (this.dividableByTarget(7)) return 'Whizz'
+
+        return '' + this.queueingNumber
     }
 
     dividableByTarget(target: number): boolean {
