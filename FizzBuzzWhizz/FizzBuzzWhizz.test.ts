@@ -88,4 +88,11 @@ describe('The number includes 5', () => {
         const fizzBuzzWhizz = new FizzBuzzWhizz(35);
         expect(fizzBuzzWhizz.report()).toEqual('BuzzWhizz');
     });
+});
+
+describe('The number includes 7', () => {
+    test('should return 17 when queueing number is 17 which is not dividable by 3, 5, 7', () => {
+        const fizzBuzzWhizz = new FizzBuzzWhizz(17);
+        expect(fizzBuzzWhizz.report()).toEqual('17');
+    });
 })
