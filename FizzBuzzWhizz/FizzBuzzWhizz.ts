@@ -7,15 +7,18 @@ export default class FizzBuzzWhizz{
     }
 
     report(): string {
-        if (this.queueingNumber.toString().includes('3')) {
-            this.reportExpression = 'Fizz'
-        } else if (this.queueingNumber.toString().includes('5')) {
+        if (this.queueingNumber.toString().includes('5')) {
             this.reportExpression = '' + this.queueingNumber
             if (this.dividableByTarget(5)) {
                 this.reportExpression = 'Buzz'
+                if (this.dividableByTarget(7)) {
+                    this.reportExpression = 'BuzzWhizz'
+                }
             } else if (this.dividableByTarget(7)) {
                 this.reportExpression = 'Whizz'
             }
+        } else if (this.queueingNumber.toString().includes('3')) {
+            this.reportExpression = 'Fizz'
         } else if (this.dividableByTarget(3)) {
             this.reportExpression = 'Fizz'
             if (this.dividableByTarget( 5)) {

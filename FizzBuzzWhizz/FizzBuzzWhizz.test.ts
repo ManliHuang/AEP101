@@ -77,5 +77,15 @@ describe('The number includes 5', () => {
     test('should return Whizz when queueing number is 56 which is only dividable by 7', () => {
         const fizzBuzzWhizz = new FizzBuzzWhizz(56);
         expect(fizzBuzzWhizz.report()).toEqual('Whizz');
-    })
+    });
+
+    test('should return Buzz when queueing number is 15 which is dividable by 3, 5', () => {
+        const fizzBuzzWhizz = new FizzBuzzWhizz(15);
+        expect(fizzBuzzWhizz.report()).toEqual('Buzz');
+    });
+
+    test('should return Buzz when queueing number is 35 which is dividable by 5, 7', () => {
+        const fizzBuzzWhizz = new FizzBuzzWhizz(35);
+        expect(fizzBuzzWhizz.report()).toEqual('BuzzWhizz');
+    });
 })
