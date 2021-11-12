@@ -7,7 +7,9 @@ export default class FizzBuzzWhizz{
     }
 
     report(): string {
-        if (this.queueingNumber.toString().includes('5')) {
+        if (this.queueingNumber.toString().includes('7')) {
+            this.reportExpression = '' + this.queueingNumber
+        } else if (this.queueingNumber.toString().includes('5')) {
             this.reportExpression = '' + this.queueingNumber
             if (this.dividableByTarget(5)) {
                 this.reportExpression = 'Buzz'
