@@ -15,7 +15,7 @@ based on business
 1. given this is the 1st student, the number is not dividable by 3, 5, 7 and excludes 3, 5, 7, when reporting, then he reports 1
 2. given this is the 6th student, the number is only dividable by 3 and excludes 3, 5, 7, when reporting, then he reports 'Fizz'
 3. given this is the 5th student, the number is only dividable by 5 and excludes 3, 5, 7, when reporting, then he reports 'Buzz'
-4. given this is the 7th student, the number is only dividable by 7 and excludes 3, 5, 7, when reporting, then he reports 'Whizz'
+4. given this is the 14th student, the number is only dividable by 7 and excludes 3, 5, 7, when reporting, then he reports 'Whizz'
 5. given this is the 60th student, the number is dividable by 3, 5 and excludes 3, 5, 7, when reporting, then he reports 'FizzBuzz'
 6. given this is the 21st student, the number is dividable by 3, 7 and excludes 3, 5, 7, when reporting, then he reports 'FizzWhizz'
 7. given this is the 140th student, the number is dividable by 5, 7 and excludes 3, 5, 7, when reporting, then he reports 'BuzzWhizz'
