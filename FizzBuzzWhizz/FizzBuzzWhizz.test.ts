@@ -105,4 +105,10 @@ describe('The number includes 7', () => {
         const fizzBuzzWhizz = new FizzBuzzWhizz(7);
         expect(fizzBuzzWhizz.report()).toEqual('Whizz');
     });
+
+    test('should return FizzWhizz when queueing number is 357 which is dividable by 3, 7', () => {
+        const fizzBuzzWhizz = new FizzBuzzWhizz(357);
+        expect(fizzBuzzWhizz.report()).toEqual('FizzWhizz');
+    });
+
 })
