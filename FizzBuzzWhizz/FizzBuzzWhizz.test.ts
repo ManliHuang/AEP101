@@ -18,8 +18,8 @@ describe('The number is only dividable by one target number and excludes 3, 5, 7
         expect(fizzBuzzWhizz.report()).toEqual("Buzz");
     });
 
-    test('should return Whizz when queueing number is 7 which is only dividable by 7 and excludes 3, 5, 7', () => {
-        const fizzBuzzWhizz = new FizzBuzzWhizz(7);
+    test('should return Whizz when queueing number is 14 which is only dividable by 7 and excludes 3, 5, 7', () => {
+        const fizzBuzzWhizz = new FizzBuzzWhizz(14);
         expect(fizzBuzzWhizz.report()).toEqual("Whizz");
     });
 });
@@ -94,5 +94,10 @@ describe('The number includes 7', () => {
     test('should return 17 when queueing number is 17 which is not dividable by 3, 5, 7', () => {
         const fizzBuzzWhizz = new FizzBuzzWhizz(17);
         expect(fizzBuzzWhizz.report()).toEqual('17');
+    });
+
+    test('should return 170 when queueing number is 170 which is dividable by 5', () => {
+        const fizzBuzzWhizz = new FizzBuzzWhizz(170);
+        expect(fizzBuzzWhizz.report()).toEqual('170');
     });
 })
