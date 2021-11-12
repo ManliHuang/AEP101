@@ -32,8 +32,8 @@ based on business
 18. given this is the 170th student, the number includes 7 and is only dividable by 5, when reporting, then he reports 170
 19. given this is the 7th student, the number includes 7 and is only dividable by 7, when reporting, then he reports 'Whizz' 
 20. given this is the 357th student, the number includes 7 and is dividable by 3, 7, when reporting, then he reports 'FizzWhizz'
-21. given this is the 73rd student, the number includes 3, 7and is not dividable by 3, 5, 7, when reporting, then he reports 'Fizz' 
-22. given this is the 75th student, the number includes 5, 7and is dividable by 5, 7, when reporting, then he reports 'Fizz'
+21. given this is the 73rd student, the number includes 3, 7 and is not dividable by 3, 5, 7, when reporting, then he reports 'Fizz' 
+22. given this is the 75th student, the number includes 5, 7 and is dividable by 5, 7, when reporting, then he reports 'Fizz'
 
 ## Test Driven Development
 

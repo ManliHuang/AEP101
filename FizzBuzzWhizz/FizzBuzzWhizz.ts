@@ -9,6 +9,10 @@ export default class FizzBuzzWhizz{
     report(): string {
         if (this.inclusiveByTarget('7')) {
             this.reportExpression = '' + this.queueingNumber;
+            if (this.inclusiveByTarget('3')) {
+                this.reportExpression = 'Fizz'
+            }
+
             if (this.dividableByTarget(7)) {
                 this.reportExpression = 'Whizz';
                 if (this.dividableByTarget(3)) {

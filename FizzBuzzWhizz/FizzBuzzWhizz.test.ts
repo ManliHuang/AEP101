@@ -110,5 +110,11 @@ describe('The number includes 7', () => {
         const fizzBuzzWhizz = new FizzBuzzWhizz(357);
         expect(fizzBuzzWhizz.report()).toEqual('FizzWhizz');
     });
+})
 
+describe('The number includes more than one target number', () => {
+    test('should return Fizz when queueing number includes 3, 7 and is not dividable by 3, 5, 7', () => {
+        const fizzBuzzWhizz = new FizzBuzzWhizz(73);
+        expect(fizzBuzzWhizz.report()).toEqual('Fizz');
+    })
 })
