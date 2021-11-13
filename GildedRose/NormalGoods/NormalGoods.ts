@@ -15,8 +15,11 @@ export default class NormalGoods {
         return this._quality
     }
 
-    public daysPassed(days: number) {
-        this._quality -= days;
+    public daysPassed(days: number = 1) {
         this._sellIn -= days
+
+        if (this._quality > 0) {
+            this._quality -= days;
+        }
     }
 }
