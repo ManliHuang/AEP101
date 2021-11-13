@@ -20,6 +20,7 @@ export default class {
         this._sellIn -= days;
 
         this._qualityMinusScale = 1;
-        this._quality += this._qualityMinusScale
+        this._quality += this._qualityMinusScale;
+        this._quality = Math.min(50, this._quality)
     }
 }
