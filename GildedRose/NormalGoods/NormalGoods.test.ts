@@ -1,3 +1,5 @@
+import NormalGoods from "./NormalGoods";
+
 describe('Normal Goods', () => {
     test('SellIn and Quality should be 0 when one day passes given Quality and SellIn are both 1', () => {
         const normalGoods = new NormalGoods(1, 1);
