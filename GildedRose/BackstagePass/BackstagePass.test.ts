@@ -28,4 +28,11 @@ describe('Backstage Pass', () => {
         expect(backstagePass.sellIn).toEqual(2);
         expect(backstagePass.quality).toEqual(50);
     })
+
+    test('SellIn should be -1 and Quality should be 0 when one day passes given Quality is 50 and SellIn is 1', () => {
+        const backstagePass = new BackstagePass(0, 50);
+        backstagePass.daysPassed();
+        expect(backstagePass.sellIn).toEqual(-1);
+        expect(backstagePass.quality).toEqual(0);
+    })
 })
