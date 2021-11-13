@@ -1,5 +1,5 @@
 1. given the Quality and SellIn of a normal item are both 1, when one day passes, then SellIn and Quality are both 0
-2. given the Quality of a normal item is 0 and its SellIn is 1, when one day passes, then SellIn is -1 and Quality is 0
+2. given the Quality and SellIn of a normal item are both 0 , when one day passes, then SellIn is -1 and Quality is 0
 3. given the Quality of a normal item is 2 and its SellIn is -1, when one day passes, then SellIn is -2 and Quality is 0
 4. given the Quality of a normal item is 1 and its SellIn is -1, when one day passes, then SellIn is -2 and Quality is 0
 
