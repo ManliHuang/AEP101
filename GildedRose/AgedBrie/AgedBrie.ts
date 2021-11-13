@@ -18,8 +18,7 @@ export default class {
 
     public daysPassed(days: number = 1) {
         this._sellIn -= days;
-
-        this._qualityMinusScale = 1;
+        this._qualityMinusScale = this._sellIn > 0 ? 1 : 2;
         this._quality += this._qualityMinusScale;
         this._quality = Math.min(50, this._quality)
     }
