@@ -1,25 +1,10 @@
-export default class {
-    private _sellIn: number;
-    private _quality: number;
-    private _qualityMinusScale: number;
+import Goods from "../Goods/Goods";
 
-    constructor(sellIn: number, quality: number) {
-        this._sellIn = sellIn;
-        this._quality = quality;
-    }
-
-    public get sellIn() {
-        return this._sellIn;
-    }
-
-    public get quality() {
-        return this._quality
-    }
-
+export default class AgedBrie extends Goods{
     public daysPassed(days: number = 1) {
-        this._sellIn -= days;
-        this._qualityMinusScale = this._sellIn > 0 ? 1 : 2;
-        this._quality += this._qualityMinusScale;
-        this._quality = Math.min(50, this._quality)
+        this.sellIn -= days;
+        this.qualityChangeScale = this.sellIn > 0 ? 1 : 2;
+        this.quality += this.qualityChangeScale;
+        this.quality = Math.min(50, this.quality)
     }
 }
