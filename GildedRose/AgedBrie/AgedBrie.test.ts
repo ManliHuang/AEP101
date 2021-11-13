@@ -14,4 +14,11 @@ describe('Aged Brie', () => {
         expect(agedBrie.sellIn).toEqual(0);
         expect(agedBrie.quality).toEqual(50);
     })
+
+    test('SellIn should be -1 and Quality should be 50 when one day passes given Quality is 48 and SellIn is 0', () =>{
+        const agedBrie = new AgedBrie(1, 50);
+        agedBrie.daysPassed();
+        expect(agedBrie.sellIn).toEqual(0);
+        expect(agedBrie.quality).toEqual(50);
+    })
 })
