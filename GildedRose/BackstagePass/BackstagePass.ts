@@ -9,5 +9,6 @@ export default class BackstagePass extends Goods {
         }
         this.sellIn -= days;
         this.quality += this.qualityChangeScale;
+        this.quality = Math.min(50, this.quality)
     };
 }
